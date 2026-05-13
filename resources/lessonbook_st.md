@@ -5,8 +5,6 @@
 # 目的
 pythonのfor文を使って、夜のまちと花火の絵を作ろう<br>
 
-<!-- 画像を入れる場合はここに完成画像を追加する -->
-
 # 内容目標
 for文の使い方をマスターする
 
@@ -141,6 +139,8 @@ Ex. 関数を使ってプログラムを見やすくする<br>
 Exは順不同。<br>
 
 # turtleの基本
+<img src="./image/color.png" width="50%" height=50%>
+
 ## 前に進む<br>
 ```python:python
 forward(100)
@@ -225,16 +225,6 @@ for i in range(4):
 ## Work1 四角形の大きさを変えてみよう
 上のプログラムを変えて、1辺が150の四角形を描いてください。<br>
 
-<details><summary>答え</summary>
-
-```python:demo.py
-for i in range(4):
-  forward(150)
-  right(90)
-```
-
-</details>
-
 # STEP1 ビルを作ろう
 ここでは、夜のまちにあるビルを作っていきます。<br>
 ビルは長方形なので、for文を使って作ることができます。<br>
@@ -244,15 +234,7 @@ for i in range(4):
 
 <img src="./image/buil_on.png" width="50%" height=50%>
 
-```python:main.py
-for i in range(2):
-  forward(100)
-  left(90)
-  forward(160)
-  left(90)
-```
-
-このプログラムでは、以下の動きを2回くり返しています。<br>
+ヒント: このプログラムでは、以下の動きを2回くり返しています。<br>
 
 ```
 横に100進む
@@ -269,36 +251,10 @@ for i in range(2):
 
 <img src="./image/buil.png" width="50%" height=50%>
 
-```python:main.py
-color("gray")
-beginfill()
-for i in range(2):
-  forward(100)
-  left(90)
-  forward(160)
-  left(90)
-endfill()
-```
-
 `beginfill()`と`endfill()`で囲むと、その間に描いた図形が塗りつぶされます。<br>
 
 ## Work2 ビルの高さを変えてみよう
 上のプログラムを変更して、高さが200のビルを作ってください。<br>
-
-<details><summary>答え</summary>
-
-```python:main.py
-color("gray")
-beginfill()
-for i in range(2):
-  forward(100)
-  left(90)
-  forward(200)
-  left(90)
-endfill()
-```
-
-</details>
 
 # STEP2 窓を並べよう
 ビルだけでは少し寂しいので、次に窓を作ります。<br>
@@ -330,57 +286,13 @@ pendown()
 
 <img src="./image/window.png" width="50%" height=50%>
 
-
-```python:main.py
-color("yellow")
-beginfill()
-for i in range(4):
-  forward(20)
-  left(90)
-endfill()
-```
-
 次に、窓を3つ横に並べます。<br>
-
-```python:main.py
-color("yellow")
-
-for n in range(3):
-  beginfill()
-  for i in range(4):
-    forward(20)
-    left(90)
-  endfill()
-
-  penup()
-  forward(30)
-  pendown()
-```
 
 外側のfor文は、窓を3つ作るためのくり返しです。<br>
 内側のfor文は、1つの窓を四角形にするためのくり返しです。<br>
 
 ## Work3 窓の数を変えてみよう
 窓を3つではなく、4つ横に並べてください。<br>
-
-<details><summary>答え</summary>
-
-```python:main.py
-color("yellow")
-
-for n in range(4):
-  beginfill()
-  for i in range(4):
-    forward(20)
-    left(90)
-  endfill()
-
-  penup()
-  forward(30)
-  pendown()
-```
-
-</details>
 
 # STEP3 花火を作ろう
 ここでは、夜空に上がる花火を作っていきます。<br>
@@ -434,21 +346,6 @@ for i in range(18):
 
 <img src="./image/1.png" width="50%" height=50%>
 
-<details><summary>答え</summary>
-
-```python:main.py
-pencolor("blue")
-
-for i in range(18):
-  forward(50)
-  penup()
-  backward(50)
-  pendown()
-  right(20)
-```
-
-</details>
-
 # STEP4 夜のまちを完成させよう
 ここまでで、次の部品を作れるようになりました。<br>
 
@@ -477,77 +374,6 @@ for i in range(18):
 - 窓の色<br>
 - 花火の色<br>
 - 花火の大きさ<br>
-
-## 完成例の枠組み
-以下は、完成プログラムの枠組みです。<br>
-必要なところを自分で埋めてください。<br>
-
-```python:main.py
-# 必要な場合だけ書く
-# from turtle import *
-
-speed(0)
-bgcolor("black")
-
-# === STEP1 ビルを描く ===
-color("gray")
-beginfill()
-for i in range(2):
-  forward(100)
-  left(90)
-  forward(160)
-  left(90)
-endfill()
-
-# === STEP2 窓の場所まで移動する ===
-penup()
-forward(20)
-left(90)
-forward(40)
-right(90)
-pendown()
-
-# === STEP2 窓を横に並べる ===
-color("yellow")
-for n in range(3):
-  beginfill()
-  for i in range(4):
-    forward(20)
-    left(90)
-  endfill()
-
-  penup()
-  forward(30)
-  pendown()
-
-# === STEP3 花火の場所まで移動する ===
-penup()
-left(90)
-forward(160)
-right(90)
-forward(80)
-pendown()
-
-# === STEP3 花火を描く ===
-pencolor("red")
-for i in range(18):
-  forward(80)
-  penup()
-  backward(80)
-  pendown()
-  right(20)
-
-# 必要な場合だけ書く
-# done()
-```
-
-<details><summary>先生用メモ</summary>
-
-上のコードは、位置移動をなるべく `penup()` / `pendown()` / `forward()` / `left()` / `right()` だけで書いています。<br>
-ただし、授業で `goto()` をすでに扱っている場合は、花火やビルの位置移動を `goto(x, y)` に置き換えた方が理解しやすい場合があります。<br>
-また、通常のturtleでは `begin_fill()` / `end_fill()` を使います。今回のエディタで `beginfill()` / `endfill()` が使える前提で書いています。<br>
-
-</details>
 
 # Ex1 窓を2段にしてみよう
 窓を横に並べるだけでなく、2段にしてみましょう。<br>
@@ -697,5 +523,3 @@ endfill()
 
 **Acknowledgement**  
 This material was reviewed and refined with the assistance of ChatGPT (OpenAI).
-
-Kazuma Aoyama(bloodtune65@gmail.com)
