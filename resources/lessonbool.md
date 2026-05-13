@@ -114,11 +114,22 @@ for文の使い方をマスターする
 
 # プログラム全体図
 ①for文でビルの形を作る<br>
+<img src="./image/buil_on.png" width="50%" height=50%>
+
 ②beginfill / endfill を使ってビルを塗りつぶす<br>
+<img src="./image/buil.png" width="50%" height=50%>
+
 ③penup / pendown を使って、窓の場所まで移動する<br>
+<img src="./image/move.png" width="50%" height=50%>
+
 ④for文で窓を横に並べる<br>
+<img src="./image/window.png" width="50%" height=50%>
+
 ⑤for文で花火を作る<br>
+<img src="./image/fire.png" width="50%" height=50%>
+
 ⑥色や数を変えて、自分の作品にする<br>
+<img src="./image/1.png" width="50%" height=50%>
 
 ★★一旦完成★★
 
@@ -168,12 +179,13 @@ color("yellow")
 ## 塗りつぶす<br>
 ```python:python
 color("gray")
-beginfill()
+begin_fill()
 for i in range(4):
   forward(100)
   right(90)
-endfill()
+end_fill()
 ```
+<img src="./image/fill.png" width="50%" height=50%>
 
 `beginfill()`から`endfill()`までの間に描いた図形が塗りつぶされます。<br>
 
