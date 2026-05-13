@@ -140,9 +140,7 @@ Exは順不同。<br>
 
 # プログラム
 
-プログラムは以下から書いてください
-
-<a href="https://trinket.io/python/80fea69346" target="_blank" rel="noopener noreferrer">https://trinket.io/python/80fea69346</a>
+プログラムはレッスンブック M3_1 のものを使用してください。
 
 # turtleの基本
 <img src="./image/color.png" width="50%" height=50%>
