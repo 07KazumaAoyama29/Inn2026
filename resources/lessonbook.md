@@ -114,7 +114,7 @@ for文の使い方をマスターする
 ①for文でビルの形を作る<br>
 <img src="./image/buil_on.png" width="50%" height=50%>
 
-②beginfill / endfill を使ってビルを塗りつぶす<br>
+②begin_fill / end_fill を使ってビルを塗りつぶす<br>
 <img src="./image/buil.png" width="50%" height=50%>
 
 ③penup / pendown を使って、窓の場所まで移動する<br>
@@ -185,7 +185,7 @@ end_fill()
 ```
 <img src="./image/fill.png" width="50%" height=50%>
 
-`beginfill()`から`endfill()`までの間に描いた図形が塗りつぶされます。<br>
+`begin_fill()`から`end_fill()`までの間に描いた図形が塗りつぶされます。<br>
 
 # for文の復習
 ## 同じ命令をくり返す
@@ -269,16 +269,16 @@ for i in range(2):
 
 ```python:main.py
 color("gray")
-beginfill()
+begin_fill()
 for i in range(2):
   forward(100)
   left(90)
   forward(160)
   left(90)
-endfill()
+end_fill()
 ```
 
-`beginfill()`と`endfill()`で囲むと、その間に描いた図形が塗りつぶされます。<br>
+`begin_fill()`と`end_fill()`で囲むと、その間に描いた図形が塗りつぶされます。<br>
 
 ## Work2 ビルの高さを変えてみよう
 上のプログラムを変更して、高さが200のビルを作ってください。<br>
@@ -287,13 +287,13 @@ endfill()
 
 ```python:main.py
 color("gray")
-beginfill()
+begin_fill()
 for i in range(2):
   forward(100)
   left(90)
   forward(200)
   left(90)
-endfill()
+end_fill()
 ```
 
 </details>
@@ -331,11 +331,11 @@ pendown()
 
 ```python:main.py
 color("yellow")
-beginfill()
+begin_fill()
 for i in range(4):
   forward(20)
   left(90)
-endfill()
+end_fill()
 ```
 
 次に、窓を3つ横に並べます。<br>
@@ -344,11 +344,11 @@ endfill()
 color("yellow")
 
 for n in range(3):
-  beginfill()
+  begin_fill()
   for i in range(4):
     forward(20)
     left(90)
-  endfill()
+  end_fill()
 
   penup()
   forward(30)
@@ -367,11 +367,11 @@ for n in range(3):
 color("yellow")
 
 for n in range(4):
-  beginfill()
+  begin_fill()
   for i in range(4):
     forward(20)
     left(90)
-  endfill()
+  end_fill()
 
   penup()
   forward(30)
@@ -465,7 +465,7 @@ for i in range(18):
 - for文を3回以上使う<br>
 - penup / pendown を使う<br>
 - color または pencolor を使う<br>
-- beginfill / endfill を使う<br>
+- begin_fill / end_fill を使う<br>
 
 変更してよいものは以下です。<br>
 
@@ -489,13 +489,13 @@ bgcolor("black")
 
 # === STEP1 ビルを描く ===
 color("gray")
-beginfill()
+begin_fill()
 for i in range(2):
   forward(100)
   left(90)
   forward(160)
   left(90)
-endfill()
+end_fill()
 
 # === STEP2 窓の場所まで移動する ===
 penup()
@@ -508,11 +508,11 @@ pendown()
 # === STEP2 窓を横に並べる ===
 color("yellow")
 for n in range(3):
-  beginfill()
+  begin_fill()
   for i in range(4):
     forward(20)
     left(90)
-  endfill()
+  end_fill()
 
   penup()
   forward(30)
@@ -539,14 +539,6 @@ for i in range(18):
 # done()
 ```
 
-<details><summary>先生用メモ</summary>
-
-上のコードは、位置移動をなるべく `penup()` / `pendown()` / `forward()` / `left()` / `right()` だけで書いています。<br>
-ただし、授業で `goto()` をすでに扱っている場合は、花火やビルの位置移動を `goto(x, y)` に置き換えた方が理解しやすい場合があります。<br>
-また、通常のturtleでは `begin_fill()` / `end_fill()` を使います。今回のエディタで `beginfill()` / `endfill()` が使える前提で書いています。<br>
-
-</details>
-
 # Ex1 窓を2段にしてみよう
 窓を横に並べるだけでなく、2段にしてみましょう。<br>
 
@@ -559,11 +551,11 @@ color("yellow")
 
 for row in range(2):
   for col in range(3):
-    beginfill()
+    begin_fill()
     for i in range(4):
       forward(20)
       left(90)
-    endfill()
+    end_fill()
 
     penup()
     forward(30)
@@ -589,13 +581,13 @@ for row in range(2):
 ```python:main.py
 # 1つ目のビルを描く
 color("gray")
-beginfill()
+begin_fill()
 for i in range(2):
   forward(100)
   left(90)
   forward(160)
   left(90)
-endfill()
+end_fill()
 
 # 線を引かずに右へ移動
 penup()
@@ -604,13 +596,13 @@ pendown()
 
 # 2つ目のビルを描く
 color("darkgray")
-beginfill()
+begin_fill()
 for i in range(2):
   forward(80)
   left(90)
   forward(120)
   left(90)
-endfill()
+end_fill()
 ```
 
 </details>
@@ -665,9 +657,9 @@ def square(size):
     left(90)
 
 color("yellow")
-beginfill()
+begin_fill()
 square(20)
-endfill()
+end_fill()
 ```
 
 </details>
@@ -682,12 +674,6 @@ endfill()
 - 長方形もfor文で描ける<br>
 - 窓のように同じ部品を並べるときにもfor文を使える<br>
 - 花火のように、同じ動きを角度を変えながらくり返すこともできる<br>
-- 自由制作では、最初にテーマを決めると作りやすい<br>
-
-# 補足
-今回の授業では、完全に自由な作品ではなく、**夜のまちと花火**というテーマを決めて作りました。<br>
-テーマを決めることで、「何を作ればよいか分からない」という問題を減らせます。<br>
-一方で、色・数・大きさ・場所は自由に変えられるので、自分らしい作品にできます。<br>
 
 # 参考文献
 [1] https://docs.python.org/ja/3/library/turtle.html<br>

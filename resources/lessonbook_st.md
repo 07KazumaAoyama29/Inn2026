@@ -114,7 +114,7 @@ for文の使い方をマスターする
 ①for文でビルの形を作る<br>
 <img src="./image/buil_on.png" width="50%" height=50%>
 
-②beginfill / endfill を使ってビルを塗りつぶす<br>
+②begin_fill / end_fill を使ってビルを塗りつぶす<br>
 <img src="./image/buil.png" width="50%" height=50%>
 
 ③penup / pendown を使って、窓の場所まで移動する<br>
@@ -137,6 +137,11 @@ Ex. 花火を増やす<br>
 Ex. 関数を使ってプログラムを見やすくする<br>
 
 Exは順不同。<br>
+
+# プログラム
+プログラムは以下から書いてください
+
+https://trinket.io/python/80fea69346
 
 # turtleの基本
 <img src="./image/color.png" width="50%" height=50%>
@@ -187,7 +192,7 @@ end_fill()
 ```
 <img src="./image/fill.png" width="50%" height=50%>
 
-`beginfill()`から`endfill()`までの間に描いた図形が塗りつぶされます。<br>
+`begin_fill()`から`end_fill()`までの間に描いた図形が塗りつぶされます。<br>
 
 # for文の復習
 ## 同じ命令をくり返す
@@ -251,7 +256,7 @@ for i in range(4):
 
 <img src="./image/buil.png" width="50%" height=50%>
 
-`beginfill()`と`endfill()`で囲むと、その間に描いた図形が塗りつぶされます。<br>
+`begin_fill()`と`end_fill()`で囲むと、その間に描いた図形が塗りつぶされます。<br>
 
 ## Work2 ビルの高さを変えてみよう
 上のプログラムを変更して、高さが200のビルを作ってください。<br>
@@ -288,8 +293,7 @@ pendown()
 
 次に、窓を3つ横に並べます。<br>
 
-外側のfor文は、窓を3つ作るためのくり返しです。<br>
-内側のfor文は、1つの窓を四角形にするためのくり返しです。<br>
+pencolor を "yellow" に変えた後に、四角形を書いて、塗りつぶしをしましょう。
 
 ## Work3 窓の数を変えてみよう
 窓を3つではなく、4つ横に並べてください。<br>
@@ -364,7 +368,7 @@ for i in range(18):
 - for文を3回以上使う<br>
 - penup / pendown を使う<br>
 - color または pencolor を使う<br>
-- beginfill / endfill を使う<br>
+- begin_fill / end_fill を使う<br>
 
 変更してよいものは以下です。<br>
 
@@ -380,68 +384,10 @@ for i in range(18):
 
 ヒントは、for文の中にfor文を入れることです。<br>
 
-<details><summary>答えの枠組み</summary>
-
-```python:main.py
-color("yellow")
-
-for row in range(2):
-  for col in range(3):
-    beginfill()
-    for i in range(4):
-      forward(20)
-      left(90)
-    endfill()
-
-    penup()
-    forward(30)
-    pendown()
-
-  penup()
-  backward(90)
-  left(90)
-  forward(35)
-  right(90)
-  pendown()
-```
-
-</details>
-
 # Ex2 ビルを増やしてみよう
 ビルを1つだけでなく、2つ以上描いてみましょう。<br>
 
 ただし、同じ場所に描くと重なってしまうので、`penup()`で線を引かずに移動してから描きます。<br>
-
-<details><summary>答えの枠組み</summary>
-
-```python:main.py
-# 1つ目のビルを描く
-color("gray")
-beginfill()
-for i in range(2):
-  forward(100)
-  left(90)
-  forward(160)
-  left(90)
-endfill()
-
-# 線を引かずに右へ移動
-penup()
-forward(130)
-pendown()
-
-# 2つ目のビルを描く
-color("darkgray")
-beginfill()
-for i in range(2):
-  forward(80)
-  left(90)
-  forward(120)
-  left(90)
-endfill()
-```
-
-</details>
 
 # Ex3 花火を増やしてみよう
 花火を1つだけでなく、2つ以上描いてみましょう。<br>
@@ -450,35 +396,6 @@ endfill()
 - 場所<br>
 - 色<br>
 - 大きさ<br>
-
-<details><summary>答えの枠組み</summary>
-
-```python:main.py
-# 1つ目の花火
-pencolor("red")
-for i in range(18):
-  forward(80)
-  penup()
-  backward(80)
-  pendown()
-  right(20)
-
-# 線を引かずに別の場所へ移動
-penup()
-forward(120)
-pendown()
-
-# 2つ目の花火
-pencolor("blue")
-for i in range(12):
-  forward(50)
-  penup()
-  backward(50)
-  pendown()
-  right(30)
-```
-
-</details>
 
 # Ex4 プログラムを見やすくしよう
 同じようなプログラムが何度も出てくる場合は、関数に分けると見やすくできます。<br>
@@ -493,9 +410,9 @@ def square(size):
     left(90)
 
 color("yellow")
-beginfill()
+begin_fill()
 square(20)
-endfill()
+end_fill()
 ```
 
 </details>
@@ -510,12 +427,6 @@ endfill()
 - 長方形もfor文で描ける<br>
 - 窓のように同じ部品を並べるときにもfor文を使える<br>
 - 花火のように、同じ動きを角度を変えながらくり返すこともできる<br>
-- 自由制作では、最初にテーマを決めると作りやすい<br>
-
-# 補足
-今回の授業では、完全に自由な作品ではなく、**夜のまちと花火**というテーマを決めて作りました。<br>
-テーマを決めることで、「何を作ればよいか分からない」という問題を減らせます。<br>
-一方で、色・数・大きさ・場所は自由に変えられるので、自分らしい作品にできます。<br>
 
 # 参考文献
 [1] https://docs.python.org/ja/3/library/turtle.html<br>
