@@ -1,4 +1,4 @@
-# INNOVATOR Month3 Week2
+# INNOVATOR Month2 Week2
 
 ## for文で夜のまちと花火を作ろう
 
