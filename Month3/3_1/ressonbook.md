@@ -13,8 +13,7 @@ if文で条件によって動きが変わるプログラムを作る<br>
 
 - [STEP1 if文を書いてみよう](#STEP1-if文を書いてみよう)
 - [STEP2 elseを使ってみよう](#STEP2-elseを使ってみよう)
-- [STEP3 elifを使ってみよう](#STEP3-elifを使ってみよう)
-- [STEP4 turtleでif文を使おう](#STEP4-turtleでif文を使おう)
+- [STEP3 turtleでif文を使おう](#STEP4-turtleでif文を使おう)
 </details>
 
 - [Mission レッスンブック](#Mission-レッスンブック)
