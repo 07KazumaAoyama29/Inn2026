@@ -5,65 +5,19 @@ if文で条件によって動きが変わるプログラムを作る<br>
 また、プログラムにコメントを書き、あとから読み返しやすいコードを書く習慣を身につける<br>
 
 # 目次
-<details><summary> 導入 </summary>
-
-- [今日作るもの](#今日作るもの)
-- [プログラム全体図](#プログラム全体図)
-
-</details>
-
 - [if文とは](#if文とは)
 - [条件式の復習](#条件式の復習)
 - [コメントアウト](#コメントアウト)
 
 <details><summary> if文の練習 </summary>
 
-<details><summary> STEP1 if文を書いてみよう </summary>
-
 - [STEP1 if文を書いてみよう](#STEP1-if文を書いてみよう)
-  - [①点数を判定する](#①点数を判定する)
-  - [②条件を変えて実行する](#②条件を変えて実行する)
-  - [Work3 合格判定を作ろう](#Work3-合格判定を作ろう)
-
-</details>
-
-<details><summary> STEP2 elseを使ってみよう </summary>
-
 - [STEP2 elseを使ってみよう](#STEP2-elseを使ってみよう)
-  - [①条件を満たさなかったときの処理](#①条件を満たさなかったときの処理)
-  - [②信号の判定をする](#②信号の判定をする)
-  - [Work4 赤信号なら止まるプログラム](#Work4-赤信号なら止まるプログラム)
-
-</details>
-
-<details><summary> STEP3 elifを使ってみよう </summary>
-
 - [STEP3 elifを使ってみよう](#STEP3-elifを使ってみよう)
-  - [①3つ以上の条件に分ける](#①3つ以上の条件に分ける)
-  - [②条件の順番に注意する](#②条件の順番に注意する)
-  - [Work5 信号の色を判定しよう](#Work5-信号の色を判定しよう)
-
-</details>
-
-<details><summary> STEP4 turtleでif文を使おう </summary>
-
 - [STEP4 turtleでif文を使おう](#STEP4-turtleでif文を使おう)
-  - [①条件によって線の色を変える](#①条件によって線の色を変える)
-  - [②条件によって塗りつぶしの色を変える](#②条件によって塗りつぶしの色を変える)
-  - [Work6 点数によって色が変わる線を描こう](#Work6-点数によって色が変わる線を描こう)
-
 </details>
-
-</details>
-
-<details><summary> ミッション </summary>
 
 - [Mission レッスンブック](#Mission-レッスンブック)
-
-</details>
-
-<details><summary> まとめ </summary>
-
 - [まとめ](#まとめ)
 - [補足](#補足)
 - [参考文献](#参考文献)
