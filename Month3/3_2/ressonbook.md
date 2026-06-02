@@ -1,6 +1,4 @@
-講師用のレッスンブックのテンプレートです
-
-# INNOVATOR Month Week
+# INNOVATOR Month3 Week2
 
 # 参考文献
 
