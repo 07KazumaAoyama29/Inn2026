@@ -12,20 +12,9 @@ turtleを使って、出てきたモンスターに応じた図形を描く<br>
 - [elifを使う理由](#elifを使う理由)
 - [randomモジュールについて](#randomモジュールについて)
 - [randomでガチャを作ろう](#randomでガチャを作ろう)
-
-<details><summary> モンスターガチャ作成 </summary>
-
-- [STEP1 randomでパワーを決めよう](#STEP1-randomでパワーを決めよう)
-- [STEP2 ifだけで書くとどうなるか確認しよう](#STEP2-ifだけで書くとどうなるか確認しよう)
-- [STEP3 elifでモンスターを1つだけ選ぼう](#STEP3-elifでモンスターを1つだけ選ぼう)
-- [STEP4 turtleで図形を描こう](#STEP4-turtleで図形を描こう)
-
-</details>
-
 - [Mission モンスターガチャを完成させよう](#Mission-モンスターガチャを完成させよう)
-- [Ex 発展課題](#Ex-発展課題)
+- [EX](#Ex-発展課題)
 - [まとめ](#まとめ)
-- [参考文献](#参考文献)
 
 </details>
 
