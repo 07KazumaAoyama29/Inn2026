@@ -19,29 +19,7 @@
 - [前回の復習](#前回の復習)
 - [リファレンス](#リファレンス)
 - [バトルに必要な変数](#バトルに必要な変数)
-
-<details><summary>モンスターバトルを作ろう</summary>
-
-- [STEP1 攻撃でHPを減らそう](#step1-攻撃でhpを減らそう)
-- [STEP2 ダメージをランダムにしよう](#step2-ダメージをランダムにしよう)
-- [STEP3 コマンドを選べるようにしよう](#step3-コマンドを選べるようにしよう)
-- [STEP4 決着がつくまでくり返そう](#step4-決着がつくまでくり返そう)
-- [STEP5 モンスターの反撃を作ろう](#step5-モンスターの反撃を作ろう)
-- [STEP6 勝敗を表示しよう](#step6-勝敗を表示しよう)
 - [Mission モンスターバトルを完成させよう](#mission-モンスターバトルを完成させよう)
-
-</details>
-
-<details><summary>発展課題</summary>
-
-- [Ex1 オリジナルモンスターを作ろう](#ex1-オリジナルモンスターを作ろう)
-- [Ex2 回復コマンドを追加しよう](#ex2-回復コマンドを追加しよう)
-- [Ex3 クリティカル攻撃を作ろう](#ex3-クリティカル攻撃を作ろう)
-- [Ex4 モンスターにも必殺技を追加しよう](#ex4-モンスターにも必殺技を追加しよう)
-- [Ex5 for文でHPゲージを作ろう](#ex5-for文でhpゲージを作ろう)
-
-</details>
-
 - [まとめ](#まとめ)
 - [参考文献](#参考文献)
 
@@ -232,6 +210,8 @@ import random
 # 5から10までの整数をランダムに作る
 damage = random.randint(5, 10)
 ```
+
+# mission-モンスターバトルを完成させよう
 
 ## STEP0: バトルに必要な変数を作成しよう
 ゲームの中で変化する数字は、変数に入れて管理します。<br>
@@ -514,4 +494,4 @@ heal_count = 2
 [6] https://docs.python.org/ja/3/library/random.html<br>
 
 **Acknowledgement**  
-This material was reviewed and refined with the assistance of ChatGPT (OpenAI).
+This material was reviewed and refined with the assistance of Codex and ChatGPT (OpenAI).
